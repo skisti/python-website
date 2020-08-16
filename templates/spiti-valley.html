@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url({{ url_for('static', filename='img/trek2.jpg') }})">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>MANALI - SPITI VALLEY - CHANDRATAL - MANALI</h1>
+            <h5>Kaza, Himanchal Pradesh, India</h5>
+            
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        
+      </div>
+     
+    </div>
+  </header>
+
+  <!-- Page Content -->
+ 
+   
+    <div class="main-container">
+      <h2 class="day-header">Escape to Reality......Spiti Valley......8 days Journey</h2>
+      
+        <p> o Unique geographical features make Spiti Valley more desirable journey by explorers. But there are a few things that one must be aware of before sealing the Lahaul Spiti tour plan.<br>
+        o Spiti Valley is a cold desert mountain valley located high in the Himalayas in the north-eastern part of the northern Indian state of Himachal Pradesh. The valley boasts of wide varieties of flora and fauna. <br>
+        o If you are in Spiti,Trekking and Camping are a must. You can also explore the cold deserted mountain found in every corner, lakes which are crystal and clear and the culture which are colourful in nature.<br>
+        o As said it is an escape from reality,an escape from day to day life as in these places there are no mobile networks (except if you have BSNL network which we assume you don't have). So pack yourself for a detached life when you are in the valley.
+          </p>
+           
+    
+        <div class="day-content">
+            <article class="day-info-left">
+                <h3>Day 1 – Reach Delhi from Mumbai</h3>
+                <p>o Reach Delhi by 7.30 PM.<br>
+                o Travel options from Mumbai to Delhi either by Train or Flight.<br>
+                o Bus will depart from Delhi to Manali between 9.30 PM to 10.30 PM.<br>
+                o Bus options semi - sleeper.
+                </p>
+
+                 
+            </article>
+       <img class="day-img-left" src="{{ url_for('static', filename='img/delhi.jpg') }}" alt="Spiti image">
+        </div>      
+
+        <div class="day-content">
+            <article class="day-info">
+              <h3>Day 2 - Delhi to Manali – Overnight at Manali</h3>
+                <p>o  Its 12 hours journey depends on the weather and monsoon. We will reach Manali in the morning and check in to the hotel. This day will be open and you are free to do whatever you want but most important thing is to relax.<br>
+                o There are various place to visit in Manali,you can visit HidimbaTemple which date backs to 1553 AD or Manu temple which is only accessible by foot or Vashisht Temple to have a bath in hot spring,or just explore some good café with continental food in Old Manali.<br>
+                o In case you have missed packing something then this is the time when you should go shopping as Spiti valley doesn’t have such luxuries.
+                </p>
+                
+            </article>
+        <img class="day-img" src="{{ url_for('static', filename='img/hadimba.jpg') }}" alt="Spiti image">
+        </div>   
+        <div class="day-content">
+            <article class="day-info-left">
+              
+              <h3>Day 3 -Manali to Kaza via Rohtang Pass &Kunzum Pass – Overnight at Kaza</h3>
+                <p>o  Journey from Manali will start in the morning by SUV or Tempo travellers depending upon the size of the group. This will take around 12 hrs to reach Kaza.<br>
+                o The first stop will be a mighty Rohtang Pass which is one of the oldest pass. Known for its scenic beauty, Rohtang Pass holds strategic importance for India. It's the gateway to Keylong in the landlocked Lahaul Valley from Manali.Spend some time at the pass and then head towards Gramphoo for breakfast.<br>
+                o From Gramphoo you shall start noticing change in terrain where you will see fewer trees and more of steep mountain peaks and beginning of barren landscape.<br>
+                
+                </p>
+              
+            </article>
+        <img class="day-img-left" src="{{ url_for('static', filename='img/Hikkim.jpg') }}" alt="Spiti image">
+        </div>     
+
+        <div class="day-content">
+            <article class="day-info">
+              <h3>Day 4 - Kaza to Dhankar and Tabo and back to Kaza – Overnight at Kaza</h3>
+                <p>o  After a relaxed breakfast we will head to Tabo Monastery which date backs to 996 CE in the Tibetan year of the Fire Ape.<br>
+                o Then we will go ahead to Dhankar village, the former capital of Spiti, it includes Dhankar Monastery which is built on a high mountain spur overlooking the confluence of the Spiti and Pin Rivers. It is one of the world’s most spectacular scenery.<br>
+                o Then we will hike to Dhankarlake which is a steep walk of 45 minutes. The Dhankar Lake is sited about 1.5 km from the village at a height of 13,500 ft.However camping is not allowed and the climb is optional.Spend some time at the lake and head backto our hotel and enjoy the chill weather of Kaza or else you can take an experience of Stargazing.
+
+                </p>
+                
+            </article>
+        <img class="day-img" src="{{ url_for('static', filename='img/photo2.jpg') }}" alt="Spiti image">
+        </div>
+
+        <div class="day-content">
+            <article class="day-info-left">
+              <h3>Day 5 - Kaza to Langza, Hikkim and Komic – Overnight at Kaza</h3>
+                <p>o  After breakfast head to Langza which is the 2nd highest motorable village after Komic and is home to Fossil search in the country.<br>
+                
+                o To make it a little more interesting at this altitude, the interested ones can hike from Langza to Komic via a small stop at Hikkim.<br>
+                o In order not to forget our loved ones, visit the world’s highest post office in Hikkim and post a few post cards to your loved ones.<br>
+                o Head to your last point for the day, Komic and enjoy the spectacular view of snow-capped peaks around over a cup of tea and chat with the monks.<br>
+                o The monastery in Komic is functional in winters when temperatures dip down to -30 degrees and roads get blocked
+                
+
+                </p>
+                
+            </article>
+        <img class="day-img-left" src="{{ url_for('static', filename='img/Langza.jpg') }}" alt="Spiti image">
+        </div>  
+        
+      <div class="day-content">
+            <article class="day-info">
+              <h3>Day 6 -Kaza to Chandrataal – Overnight camping at Chandrataal</h3>
+                <p>o  After Breakfast with the locals, head towards Chandrataal Lake. This is another location where you will find it hard to stop clicking photographs.<br>
+                o Trek from Kunzum pass to Chandrataal lake which is 9 kms with dedicated guide (Optional).<br>
+                o Marvel at the lake changing its appearance almost with every passing hour, each look is as stunning as the other.<br>
+                o Tonight camp in proper adventure style; excellent dome tents set up to protect you from the cold and biting night winds.
+
+                </p>
+                
+            </article>
+        <img class="day-img" src="{{ url_for('static', filename='img/Chandratal.jpg') }}" alt="Spiti image">
+        </div>
+
+        <div class="day-content">
+            <article class="day-info-left">
+              <h3>Day 7 -Chandratal to Manali – Overnight at Manali</h3>
+                <p>o  Leave early this morning to Manali after an early breakfast. You shall take a small break at Batal and say goodbye to owners of Chandra Dhaba over a cup of tea.<br>
+                o We will try to reach Rohtang pass by early afternoon and spend some time at the pass.<br>
+                o Head to Manali and relax. A small get together will be arranged in the evening over dinner.<br>
+                o Stay in Manali for the night.
+
+                </p>
+                
+            </article>
+        <img class="day-img-left" src="{{ url_for('static', filename='img/trek.jpg') }}" alt="Spiti image">
+
+        </div>
+    </div>
+</div>
+
+
+       <div class="day-content">
+                <article class="day-info-left">
+                  <h3>INCLUSION</h3>
+                   
+                    <p>o Accommodation in 3* star hotels on Double/Triple sharing basis.<br>
+                    o Veg & Nonveg food (Breakfast & Dinner).<br>
+                    o All Sightseeing in Car/Bus with experienced drivers cum guide.<br>
+                    o 1 Day complimentary bike which will be shared between 2.<br>
+                    o Camping & Fun Activities, Games.<br>
+                    o Inner line permit.<br>
+                    o 24 hours of tour assistance with the first-aid box.
+
+                    </p>
+              
+              
+                    
+                </article>
+            <h3>EXCLUSION</h3>
+                   
+                    <p>o Bike Fuel.<br>
+                    o Flight Tickets.<br>
+                    o No food between the train or flight journey.<br>
+                    o Any entrance fee, camera charges & boating charges.<br>
+                    o Camping & Fun Activities, Games.<br>
+                    o Any up-gradation in room category.<br>
+                    o Any activity or service charges are other than an itinerary.<br>
+                    o Any damage to the hotel or private property during the tour.
+
+                    </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+  </div>
+
+  
+  {% endblock %}

@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('{{ url_for('static', filename='img/trek.jpg') }}')">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>SPITI VALLEY</h1>
+                        <h6>Lahaul & Spiti, Himanchal Pradesh, India</h6>
+                        <a href="/spiti"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='img/chopta/deotal5.jpg') }}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>DEORIA TAL - CHOPTA</h3>
+                        <h6>Ukhimath, Uttrakhand, India</h6>
+                        <a href="/chopta"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='img/Coorg/3.jpg') }}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Coorg - Mysore</h3>
+                        <h6>Coorg, Karnataka, India</h6>
+                        <a href="/mysore"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <h2 class="my-4">Popular Packages</h2>
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Himanchal - A Mountain Towns</h4>
+                    <a href="/shimla"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/hadimba.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <p class="card-text">Visit Himancha Pradesh for pristine natural beauty, ancient monasteries and
+                            temples, adventure activities, unique art and craft, delectable cuisine, dance and music and
+                            exotic honeymoon destinations.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/shimla"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Coorg - Scotland of India</h4>
+                    <a href="/mysore"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/deotal3.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <p class="card-text">Coorg is blessed with picturesque charm and scenic vistas. Other than the
+                            alluring atmosphere, this mesmerizing hill station is affluent with cultural and historical
+                            backdrop. A tour to Coorg makes the tourists dip into a unique world of serenity and
+                            nature's bounty.</p>
+
+                    </div>
+                    <div class="card-footer">
+                        <a href="/mysore"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Rajasthan - City of Palaces</h4>
+                    <a href="/Rajasthan"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/kerala.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <p class="card-text">Rajasthan is one of the most popular tourist destinations in India, for
+                            both domestic and international tourists. Rajasthan attracts tourists for its historical
+                            forts, palaces, art and culture. Every third foreign tourist visiting India travels to
+                            Rajasthan as it is part of the Golden Triangle for tourists visiting India.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <h2>Trending Himalayan Tours On Travel</h2>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/spiti"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/langza.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a
+                                href="/spiti">SPITI
+                                VALLEY</a>
+                        </h4>
+                        <p class="card-text">The term Spiti means 'The Middle Land', as Spiti Valley separates India
+                            from Tibet. Scantily populated, Spiti is an adventure lover’s paradise, with a number of
+                            trekking trails that tourists can choose from.</p>
+                        <a href="/spiti"
+                            class="btn btn-primary">More</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/Ladakh"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/langza.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/ladakh">LADAKH
+                                VALLEY</a>
+                        </h4>
+                        <p class="card-text">Every third foreign tourist visiting India travels to
+                            Ladakh as it is part of the Golden Triangle for tourists visiting India.</p>
+                        <a href="/ladakh"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/chopta"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/deotal.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="/chopta">CHANDRASHILA
+                                PEAK</a>
+                        </h4>
+                        <p class="card-text">Chopta Tungnath & Chandrashila trek is one of the highlights of this
+                            circuit where the trek route surpasses the 1000-year-old Shiva temple. Sharp ascent and
+                            steep climb lead you to Chandrashila Peak located 8 km from Choptann</p>
+                        <a href="/chopta"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Camping Near Mumbai</h2>
+        <div class="row">
+
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/Shirota"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/Chopta/rafting2.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a
+                                href="/Shirota">Shirota
+                                Lake Camping</a>
+                        </h4>
+                        <p class="card-text">Shirota Lake is 18 kms drive from Lonavala. Shirota Lake Camping spot is
+                            unexplored known only by few. Road leading to Shirota Camping is completely off road and
+                            challenge to drive on. You will be travelling in jeep from Lonavala railway station till
+                            campsite we would pass Kataldhar Waterfall during monsoon.</p>
+                        <a href="/Shirota"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/Bhandar"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/chandratal.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a
+                                href="/Bhandar">Bhandardara
+                                Lake Camping</a>
+                        </h4>
+                        <p class="card-text">Bhandardara is one of the camping spot in Maharashtra and best weekend
+                            Outing Place besides Igatpuri. Bhandardara Lakeside Camping along with bonfire, barbeque and
+                            fun activities. Check cost, dates and detailed itinerary from Mumbai with us.
+
+                        </p>
+                        <a href="/Bhandar"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/pawnalake"><img
+                            class="card-img-top" src="{{ url_for('static', filename='img/deotal2.jpg') }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a
+                                href="/Pawnalake">Pawna
+                                Lake Camping</a>
+                        </h4>
+                        <p class="card-text">If you want to have a break in your busy life and have some adventure with
+                            your friends and families Pawna Lake is one of the best camping sites.</p>
+
+
+                        <a href="/Pawnalake"
+                            class="btn btn-primary">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+
+
+        </div>
+
+
+        <!-- /.row -->
+
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}    
