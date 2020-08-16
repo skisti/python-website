@@ -1,0 +1,143 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+
+/*!footer*/
+
+
+
+.logo5{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+.day-content1{
+    
+    padding-left: 40px;
+    padding-right: 40px;
+ }
+
+
+.day-img-left1{
+    
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+ .day-info-left1 h3{
+    padding: 0px 0px 0px 0px;
+    color: white;
+    
+}
+.day-info-left1 p{
+    padding: 0px 0px 0px 0px;
+    color: white;
+   
+    
+}
+
+
+.quick-contact {
+    
+   
+    list-style: none;
+    color: white;
+}
+
+
+
+.flex-container{
+    margin-top: 15px;
+    clear: both;
+    flex-direction: left;
+}
+.main .flex-container .flex-items{
+    width: 3%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 40px;
+    padding-bottom: 20px;
+
+}
+.main .flex-container .flex-items h5{
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin: 20px 0px;
+
+
+}
+.main .flex-container .flex-items p{
+    color: #727272;
+    margin-bottom: 50px;
+    color: white;
+
+}
+
+.main .flex-container .flex-items .text-blue{
+    font-size: 25px;
+    color: #3278fa !important;
+    color: white;
+}
+
+
+
+
+@media only screen and (min-width: 1000px){
+
+.day-content1{
+    
+    height: 280PX;
+    padding-left: 50px;
+    padding-right: 50px;
+ }
+.day-info-left1{
+    width: 60%;
+    float: left;
+    padding-left: 20px;
+}
+
+.day-img-left1{
+    
+    float: right;
+    width: 35%;
+    padding-right: 40px;
+
+
+}
+
+
+ .day-info-left1 h3{
+    padding: 0px 0px 0px 30px;
+    color: white;
+    
+}
+.day-info-left1 p{
+    padding: 0px 0px 0px 30px;
+    color: white;
+
+    
+}
+
+}

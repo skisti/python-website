@@ -1,0 +1,312 @@
+
+
+h2{
+    text-align: center;
+}
+
+h3{
+    padding: 20px 20px 20px;
+}
+
+p{
+    padding: 0px 20px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+    text-align: left;
+}
+
+
+.main-container{    
+	margin-left: 30px;
+	margin-right: 30px;
+	
+}
+
+
+
+.day-header{
+	padding-top: 20px;
+    padding-bottom: 10px;
+	text-align: center;
+}
+
+
+.day-content{
+    width: 100%;
+    margin: center;
+    text-align: center;
+    
+}
+.day-info p{
+    padding: 0px 20px 0px;
+    
+}
+
+.day-info{
+    width: 100%;
+}
+
+.day-img{
+    width: 90%;
+    border-radius: 5%;
+
+}
+
+
+.day-info-left p{
+    padding: 0px 20px 0px;
+    
+}
+
+.day-info-left{
+    width: 100%;
+}
+
+.day-img-left{
+	width: 90%;
+	border-radius: 5%;
+}
+
+.logo5{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+
+
+
+
+@media only screen and (min-width: 1000px){
+
+
+.day-content{
+	width: 90%;
+	height: 450px;
+    margin: 0 auto;
+	
+ 
+}
+
+.day-info{
+    width: 55%;
+    float: right;
+    
+}
+
+.day-img{
+    width: 40%;
+    float: left;
+    border-radius: 5%;
+   
+
+}
+
+.day-info-left{
+    width: 55%;
+    float: left;
+    
+}
+
+.day-img-left{
+    width: 40%;
+    float: right;
+    border-radius: 5%;
+    
+
+}
+}
+
+
+@media only screen and (min-width: 1000px){
+
+
+.day-content{
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    
+ 
+}
+
+.day-info{
+    width: 60%;
+    float: right;
+    
+}
+
+.day-img{
+    width: 40%;
+    float: left;
+    border-radius: 5%;
+   
+
+}
+
+.day-info-left{
+    width: 60%;
+    float: left;
+    
+}
+
+.day-img-left{
+    width: 40%;
+    float: right;
+    border-radius: 5%;
+    
+
+}
+}
+
+
+
+
+ /*!footer*/
+
+.day-content1{
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    
+ }
+
+
+.day-img-left1{
+    
+    width: 60%;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    
+    
+
+
+}
+
+ .day-info-left1 h3{
+    padding: 0px 0px 0px 0px;
+    color: white;
+    
+}
+.day-info-left1 p{
+    padding: 0px 0px 0px 0px;
+    color: white;
+}
+
+
+.quick-contact {
+    
+    color: white;
+    list-style: none;
+}
+
+
+
+.flex-container{
+    margin-top: 15px;
+    clear: both;
+    flex-direction: left;
+}
+.main .flex-container .flex-items{
+    width: 3%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 40px;
+    padding-bottom: 20px;
+
+}
+.main .flex-container .flex-items h5{
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin: 20px 0px;
+
+
+}
+.main .flex-container .flex-items p{
+    color: #727272;
+    margin-bottom: 50px;
+
+}
+
+.main .flex-container .flex-items .text-blue{
+    font-size: 25px;
+    color: #3278fa !important;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1000px){
+
+.day-content1{
+    
+    height: 250PX;
+    padding-left: 50px;
+    padding-right: 50px;
+ }
+.day-info-left1{
+    width: 60%;
+    float: left;
+    padding-left: 20px;
+}
+
+.day-img-left1{
+    
+   float: right;
+    width: 35%;
+    padding-right: 40px;
+
+}
+
+
+ .day-info-left1 h3{
+    padding: 0px 0px 0px 30px;
+    color: white;
+}
+.day-info-left1 p{
+    padding: 0px 0px 0px 30px;
+    color: white;
+    
+}
+
+}
+@media only screen and (min-width: 720px){
+
+.day-content1{
+    
+    height: 300PX;
+    padding-left: 50px;
+    padding-right: 50px;
+ }
+.day-info-left1{
+    width: 60%;
+    float: left;
+    padding-left: 20px;
+}
+
+.day-img-left1{
+    
+    float: right;
+    width: 35%;
+    padding-right: 40px;
+
+}
+
+
+ .day-info-left1 h3{
+    padding: 0px 0px 0px 30px;
+    color: white;
+}
+.day-info-left1 p{
+    padding: 0px 0px 0px 30px;
+    color: white;
+    
+}
+
+}
+
+
+

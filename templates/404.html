@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('{{ url_for('static', filename='img/trek.jpg') }}')">
+
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>SPITI VALLEY</h1>
+                  <h6>Lahaul & Spiti, Himanchal Pradesh, India</h6>
+                  <a href="file:///C:/Users/Istkhar%20Mohmmad/Desktop/python website/templates/spiti-valley.html"
+                      class="btn btn-primary">More</a>
+              </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='img/chopta/deotal5.jpg') }}')">
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>DEORIA TAL - CHOPTA</h3>
+                  <h6>Ukhimath, Uttrakhand, India</h6>
+                  <a href="file:///C:/Users/Istkhar%20Mohmmad/Desktop/python website/templates/chopta.html"
+                      class="btn btn-primary">More</a>
+              </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='img/Coorg/3.jpg') }}')">
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Coorg - Mysore</h3>
+                  <h6>Coorg, Karnataka, India</h6>
+                  <a href="file:///C:/Users/Istkhar%20Mohmmad/Desktop/python website/templates/Coorg.html"
+                      class="btn btn-primary">More</a>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</header>
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h2 class="mt-4 mb-3">This page is under development ......
+    </h2>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <p>Click here to go back to the homepage.</p>
+        <a href="/">Home</a>
+      
+    </ol>
+
+
+  </div>
+  <!-- /.container -->
+
+  {% endblock %}
