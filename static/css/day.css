@@ -1,5 +1,4 @@
 
-
 h2{
     text-align: center;
 }
@@ -80,81 +79,80 @@ p{
 
 @media only screen and (min-width: 1000px){
 
-
 .day-content{
 	width: 90%;
-	height: 450px;
+	height: relative;
     margin: 0 auto;
-	
- 
+
+
 }
 
 .day-info{
     width: 55%;
     float: right;
-    
+
 }
 
 .day-img{
     width: 40%;
     float: left;
     border-radius: 5%;
-   
+
 
 }
 
 .day-info-left{
     width: 55%;
     float: left;
-    
+
 }
 
 .day-img-left{
     width: 40%;
     float: right;
     border-radius: 5%;
-    
+
 
 }
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 720px){
 
 
 .day-content{
     width: 90%;
     height: 500px;
     margin: 0 auto;
-    
- 
+
+
 }
 
 .day-info{
     width: 60%;
     float: right;
-    
+
 }
 
 .day-img{
     width: 40%;
     float: left;
     border-radius: 5%;
-   
+
 
 }
 
 .day-info-left{
     width: 60%;
     float: left;
-    
+
 }
 
 .day-img-left{
     width: 40%;
     float: right;
     border-radius: 5%;
-    
+
 
 }
 }
@@ -164,30 +162,31 @@ p{
 
  /*!footer*/
 
+ footer.py-5.bg-dark{
+    padding-top: 15px;
+    padding-bottom: 10px;
+ }
+
 .day-content1{
-    
+    height: 260px;
     padding-left: 40px;
     padding-right: 40px;
-    
+
  }
 
 
 .day-img-left1{
-    
+
     width: 60%;
     padding-left: 40px;
     padding-right: 40px;
-    
-    
-    
-
 
 }
 
  .day-info-left1 h3{
     padding: 0px 0px 0px 0px;
     color: white;
-    
+
 }
 .day-info-left1 p{
     padding: 0px 0px 0px 0px;
@@ -196,7 +195,7 @@ p{
 
 
 .quick-contact {
-    
+
     color: white;
     list-style: none;
 }
@@ -237,13 +236,16 @@ p{
 
 
 
-
-
 @media only screen and (min-width: 1000px){
 
+ footer.py-5.bg-dark{
+    padding-top: 15px;
+    padding-bottom: 10px;
+ }
+
 .day-content1{
-    
-    height: 250PX;
+
+    height: 260px;
     padding-left: 50px;
     padding-right: 50px;
  }
@@ -254,7 +256,7 @@ p{
 }
 
 .day-img-left1{
-    
+
    float: right;
     width: 35%;
     padding-right: 40px;
@@ -269,15 +271,20 @@ p{
 .day-info-left1 p{
     padding: 0px 0px 0px 30px;
     color: white;
-    
+
 }
 
 }
 @media only screen and (min-width: 720px){
 
+ footer.py-5.bg-dark{
+    padding-top: 15px;
+    padding-bottom: 10px;
+ }
+
 .day-content1{
-    
-    height: 300PX;
+
+    height: 260px;
     padding-left: 50px;
     padding-right: 50px;
  }
