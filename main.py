@@ -1,23 +1,23 @@
 from flask import Flask, redirect, render_template, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from sqlalchemy.orm import validates
-import re
-import secrets
+from forms import ContactForm
+import json
 
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
 
 app = Flask(__name__)
 
-secret_key = secrets.token_hex(16)
-app.config['SECRET_KEY'] = secret_key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/travellers'
+app.secret_key = "Secret"
+app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 
 class Contact(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
     phone = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(30), nullable=False)
     message = db.Column(db.String(500), nullable=False)
@@ -26,76 +26,49 @@ class Contact(db.Model):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", params=params)
 
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    name = request.form.get("name")
-    phone = request.form.get("phone")
-    email = request.form.get("email")
-    message = request.form.get("message")
-
-    if request.method == "POST":
-        name = request.form("name")
-        phone = request.form("phone")
-        email = request.form("email")
-
+    form = ContactForm()
+    if form.validate_on_submit() and request.method == "POST":
+        name = request.form.get("name")
+        phone = request.form.get("phone")
+        email = request.form.get("email")
+        message = request.form.get("message")
         entry = Contact(name=name, phone=phone, email=email, message=message, date=datetime.now())
         db.session.add(entry)
         db.session.commit()
         flash('Thank you ' + name + ' for contacting us')
-        return render_template('contact.html')
-    else:
-        return render_template('contact.html')
+        return redirect('/contact')
+    return render_template('contact1.html', params=params, form=form)
 
 
-@validates("name")
-def validate_name(self, key, name):
-    if not name:
-        raise AssertionError('Name must not be empty')
-
-    return self.name
-
-
-@validates("phone")
-def validate_phone(self, key, phone):
-    if not phone:
-        raise AssertionError('Phone number must not be empty')
-    if not re.match("[0-9]", phone):
-        raise AssertionError('Enter the correct phone number')
-
-    return self.phone
-
-
-@validates('email')
-def validate_email(self, key, email):
-    if not email:
-        raise AssertionError('Enter an email address')
-    if not re.match("[A-Z0-9] + @[A-Z0-9.-]+.[A-Z]", email):
-        raise AssertionError('Enter the correct email address')
-
-    return self.email
+@app.route('/signup')
+def signup():
+    form = ContactForm()
+    return render_template('signup.html', form=form)
 
 
 @app.route("/blog")
 def blog():
-    return render_template("404.html")
+    return render_template("blog.html", params=params)
 
 
 @app.route("/spiti")
 def spiti():
-    return render_template("spiti-valley.html")
+    return render_template("spiti-valley.html", params=params)
 
 
 @app.route("/chopta")
 def chopta():
-    return render_template("chopta.html")
+    return render_template("chopta.html", params=params)
 
 
 @app.route("/mysore")
 def mysore():
-    return render_template("coorg.html")
+    return render_template("coorg.html", params=params)
 
 
 if __name__ == "__main__":

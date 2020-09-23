@@ -1,0 +1,14 @@
+{
+
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri" : "mysql://root:@localhost/travellers",
+    "fb_url" : "http://www.facebook.com/",
+    "tw_url" : "http://twitter.com/",
+    "inst_url" : "http://instagram.com/",
+    "No of posts" : 2
+
+  }
+
+}

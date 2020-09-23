@@ -5,23 +5,23 @@
       {% with messages = get_flashed_messages() %}
           {% if messages %}
         {% for message in messages %}
-          <div class="alert alert-success">
+          <div class="alert alert-danger">
           <strong>{{ message }}</strong>
           </div>
+  </p>
         {% endfor %}
           {% endif %}
       {% endwith %}
-    </p>
 
 
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"> 
+    <h1 class="mt-4 mb-3">
       <small> </small>
     </h1>
 
-  
+
 
     <!-- Intro Content -->
     <div class="row">
@@ -37,25 +37,25 @@
           <li>
             <strong>Assured Quality</strong>
           </li>
-          <li>Affordale Prices</li>
+          <li>Affordable Prices</li>
           <li>Tailored Packages</li>
           <li>Working contact form with validation</li>
-          
+
         </ul>
       </div>
     </div>
     <!-- /.row -->
-  
+
   <!-- Page Content -->
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    
+
 
     <!-- Content Row -->
     <div class="row">
       <!-- Map Column -->
-      
+
       <!-- Contact Details Column -->
       <div class="col-lg-4 mb-4">
         <h3>Contact Details</h3>
@@ -85,30 +85,32 @@
     <div class="row">
       <div class="col-lg-8 mb-4">
         <h3>Send us a Message</h3>
-        <form name="sentMessage" id="contactForm" action = "/contact" method="post" novalidate>
+        <form name="sentMessage" id="contactForm" action = "/contact" method="post" role="form" novalidate>
+
           <div class="control-group form-group">
             <div class="controls">
-              <label>Full Name:</label>
-              <input type="text" class="form-control" id="name" name="name" required data-validation-required-message="Please enter your name.">
-              <p class="help-block"></p>
+              <label for="name">Full Name:</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name"/>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Phone Number:</label>
-              <input type="tel" class="form-control" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
+              <label for="phone">Phone Number:</label>
+
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"/>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Email Address:</label>
-              <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+              <label for="email">Email Address:</label>
+
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address"/>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Message:</label>
-              <textarea rows="10" cols="100" class="form-control" id="message" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+              <textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Type your message here"></textarea>
             </div>
           </div>
           <div id="success"></div>
