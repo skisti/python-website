@@ -1,8 +1,9 @@
-from flask import Flask, redirect, render_template, url_for, request, flash
+from flask import Flask, redirect, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from forms import ContactForm
 import json
+import re
 
 with open('config.json', 'r') as c:
     params = json.load(c)["params"]
@@ -24,9 +25,24 @@ class Contact(db.Model):
     date = db.Column(db.String(20))
 
 
+class Posts(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(80), nullable=False)
+    slug = db.Column(db.String(25), nullable=False)
+    content = db.Column(db.String(500), nullable=False)
+    img_file = db.Column(db.String(20))
+    date = db.Column(db.String(20))
+
+
 @app.route("/")
 def home():
     return render_template("index.html", params=params)
+
+
+@app.route("/post/<string:post_slug>", methods=["GET"])
+def post_route(post_slug):
+    post = Posts.query.filter_by(slug=post_slug).first()
+    return render_template("post.html", params=params, post=post)
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -53,7 +69,8 @@ def signup():
 
 @app.route("/blog")
 def blog():
-    return render_template("blog.html", params=params)
+    posts = Posts.query.filter_by().all()
+    return render_template("blog1.html", params=params, posts=posts)
 
 
 @app.route("/spiti")
