@@ -1,9 +1,8 @@
-from flask import Flask, redirect, render_template, request, flash
+from flask import Flask, redirect, render_template, request, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from forms import ContactForm
 import json
-import re
 
 with open('config.json', 'r') as c:
     params = json.load(c)["params"]
@@ -69,8 +68,68 @@ def signup():
 
 @app.route("/blog")
 def blog():
-    posts = Posts.query.filter_by().all()
+    posts = Posts.query.filter_by().all()[0:params["No of posts"]]
     return render_template("blog1.html", params=params, posts=posts)
+
+
+@app.route("/dashboard", methods=['GET', 'POST'])
+def dashboard():
+
+    if 'user' in session and session['user'] == params['admin_user']:
+        posts = Posts.query.all()
+        return render_template("dashboard.html", params=params, posts=posts)
+
+    if request.method == 'POST':
+        username = request.form.get("uname")
+        userpass = request.form.get("Pass")
+        if username == params['admin_user'] and userpass == params['admin_password']:
+            session['user'] = username
+            posts = Posts.query.all()
+            return render_template('dashboard.html', params=params, posts=posts)
+
+    return render_template("login.html", params=params)
+
+
+@app.route("/edit/<string:sno>", methods=['GET', 'POST'])
+def edit(sno):
+    if 'user' in session and session['user'] == params['admin_user']:
+        if request.method == 'POST':
+            box_title = request.form.get('title')
+            slug = request.form.get('slug')
+            content = request.form.get('content')
+            img_file = request.form.get('img_file')
+            date = datetime.now()
+
+            if sno == '0':
+                post = Posts(title=box_title, slug=slug, content=content, img_file=img_file, date=date)
+                db.session.add(post)
+                db.session.commit()
+            else:
+                post = Posts.query.filter_by(sno=sno).first()
+                post.title = box_title
+                post.slug = slug
+                post.content = content
+                post.img_file = img_file
+                post.date = date
+                db.session.commit()
+                return redirect('/edit/'+sno)
+        post = Posts.query.filter_by(sno=sno).first()
+        return render_template("edit.html", params=params, sno=sno, post=post)
+
+
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    return redirect('/dashboard')
+
+
+@app.route("/delete/<string:sno>", methods=['GET', 'POST'])
+def delete(sno):
+    if 'user' in session and session['user'] == params['admin_user']:
+        post = Posts.query.filter_by(sno=sno).first()
+        db.session.delete(post)
+        db.session.commit()
+    return redirect('/dashboard')
 
 
 @app.route("/spiti")

@@ -7,7 +7,9 @@
     "fb_url" : "http://www.facebook.com/",
     "tw_url" : "http://twitter.com/",
     "inst_url" : "http://instagram.com/",
-    "No of posts" : 2
+    "No of posts" : 3,
+    "admin_user" : "isti",
+    "admin_password" : "password"
 
   }
 
